@@ -1,0 +1,51 @@
+---
+title: "Getting Started"
+author: "Simon Rayner"
+date: '2022-11-20'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+##Additional Software
+
+## Text Editor
+you will need a text editor. You can use anything you want (Microsoft Word doesn't count as it doesn't create plain text files). Two possibilities are [Sublime](https://www.sublimetext.com/) or [Visual Studio Code](https://code.visualstudio.com/)
+
+## Linux Command Line
+Also, access to a *Linux* command line window will be handy, but not necessary. If you have a MacOS then you are ready to go (just search for *term*) in *Spotlight Search*. If you are using Windows, you can get an Ubuntu app from the Windows store e.g., [this one](https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71#activetab=pivot:overviewtab)
+
+
+
+
+
+## Filepaths on *Windows* versus *Mac/Linux*
+As a first step you will need to change the variable `myFileFolder` at the bottom of this code block to point to wherever you downloaded the sample files. The format will be different depending on whether you are using *Windows* or *Mac/Linux*. 
+
+### *Windows*
+For *Windows* you need to use the ´\\´ to delimit folders. For example, if your login name is `WinnieThePooh` and you downloaded the file `bioproject_mirna_results.txt` to your `Downloads` folder, then the path will be `C:\Users\WinnieThePooh\Downloads\bioproject_mirna_results.txt` and you need to set `myFileFolder <- C:\Users\WinnieThePooh\Downloads` 
+
+### *Mac*
+For *Mac* you need to use the `/` delimiter. For example, if your login name is `JohnMacIntyre` and you downloaded the file `bioproject_mirna_results.txt` to your `Downloads` folder, then the path will be `/Users/JohnMacIntyre/Downloads/bioproject_mirna_results.txt` and you need to set `myFileFolder <- /Users/JohnMacIntyre/Downloads` 
+
+### *Linux*
+For *Linux* you also need to use the `/` delimiter. For example, if your login name is `WangLinFa` and you downloaded the file `bioproject_mirna_results.txt` to your `Downloads` folder, then the path will be `/home/WangLinFa/Downloads/bioproject_mirna_results.txt` and you need to set `myFileFolder <- /home/WangLinFa//Downloads` 
+
+
+## Try loading a file
+To avoid having to keep typing in the same file paths over and over again, I have put them in a separate R file and then i can just import them one time
+
+```{r importFilePaths}
+source("/Users/simonray/uio_dropbox_sr/myTeaching/MF9155_2025/lecture2__ReproducibleResearch/code/lab1filepaths.R")
+```
+
+Now, I can load my file
+
+```{r readFile}
+file.show(happyBunnyFilePath)
+```
+
+
